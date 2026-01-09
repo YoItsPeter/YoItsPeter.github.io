@@ -184,15 +184,29 @@
       letter-spacing: 0.06em;
       padding: 6px 8px;
       border-radius: 999px;
-      border: 1px solid rgba(151,252,228,0.18);
-      background: rgba(151,252,228,0.06);
-      color: rgba(255,255,255,0.80);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.82);
       min-width: 82px;
     }
 
-    .badge-active { border-color: rgba(151,252,228,0.24); }
-    .badge-growth { border-color: rgba(151,252,228,0.20); }
-    .badge-research { border-color: rgba(151,252,228,0.16); opacity: 0.92; }
+    .badge-active {
+      border-color: rgba(151,252,228,0.32);
+      background: rgba(151,252,228,0.10);
+      color: rgba(151,252,228,0.95);
+    }
+
+    .badge-wip {
+      border-color: rgba(112,169,235,0.34);
+      background: rgba(112,169,235,0.10);
+      color: rgba(190,221,255,0.95);
+    }
+
+    .badge-research {
+      border-color: rgba(177,112,235,0.34);
+      background: rgba(177,112,235,0.10);
+      color: rgba(226,197,255,0.95);
+    }
 
     .proj-top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
     .proj-name { font-weight: 500; }
@@ -285,7 +299,7 @@
       <section id="blotter" class="panel" aria-label="Project blotter">
         <div class="panel-head">
           <div class="panel-title">PROJECT BLOTTER</div>
-          <div class="panel-sub">A minimal, desk-style view of strategies, projects, and research.</div>
+          <div class="panel-sub">A consise overview of my projects, research, and strategies that i've created.</div>
         </div>
 
         <table>
@@ -300,15 +314,15 @@
           <tbody>
             
       <tr>
-        <td class="col-status"><span class="badge badge-active">TBD</span></td>
+        <td class="col-status"><span class="badge badge-wip">WIP</span></td>
         <td class="col-name">
           <div class="proj">
             <div class="proj-top">
-              <span class="proj-name">Polymarket Arbitrage</span>
+              <span class="proj-name">Polymarket Multi-Strat Portfolio</span>
               <span class="proj-venue">Polymarket</span>
             </div>
-            <div class="proj-desc">Real-time order book analysis and cross-exchange arbitrage detection. Exploits price discrepancies in prediction markets with low-latency WebSocket integration.</div>
-            <div class="proj-tech">Python · WebSocket · Real-time</div>
+            <div class="proj-desc">A portfolio of various quantitative strategies deployed on polymarket, including but not limited to market making, arbitrage, stat-arb strategies.</div>
+            <div class="proj-tech">Python · Prediction Markets · Multi-Strat</div>
           </div>
         </td>
         <td class="col-value">N/A</td>
@@ -316,15 +330,15 @@
       </tr>
     
       <tr>
-        <td class="col-status"><span class="badge badge-active">TBD</span></td>
+        <td class="col-status"><span class="badge badge-wip">WIP</span></td>
         <td class="col-name">
           <div class="proj">
             <div class="proj-top">
               <span class="proj-name">Hyperliquid MM Bot</span>
               <span class="proj-venue">Hyperliquid</span>
             </div>
-            <div class="proj-desc">Market-making algorithm for perpetual futures. Provides liquidity on Hyperliquid with optimized order placement and dynamic spread management.</div>
-            <div class="proj-tech">Async Python · API · Futures</div>
+            <div class="proj-desc">Market-making algorithm for perpetual futures. Provides liquidity on Hyperliquid with optimized order placement and dynamic inventory management.</div>
+            <div class="proj-tech">Python · Crypto · Market Making</div>
           </div>
         </td>
         <td class="col-value">N/A</td>
@@ -332,63 +346,63 @@
       </tr>
     
       <tr>
-        <td class="col-status"><span class="badge badge-research">TBD</span></td>
+        <td class="col-status"><span class="badge badge-wip">WIP</span></td>
+        <td class="col-name">
+          <div class="proj">
+            <div class="proj-top">
+              <span class="proj-name">Sports Betting Arbitrage Finder</span>
+              <span class="proj-venue">Sports Books</span>
+            </div>
+            <div class="proj-desc">Sports betting arbitrage finder that identifies risk free arbitrage between various sportsbooks in real time.</div>
+            <div class="proj-tech">Python · Sports Betting · Arbitrage</div>
+          </div>
+        </td>
+        <td class="col-value">N/A</td>
+        <td class="col-perf"><span class="perf">N/A</span></td>
+      </tr>
+    
+      <tr>
+        <td class="col-status"><span class="badge badge-active">ACTIVE</span></td>
+        <td class="col-name">
+          <div class="proj">
+            <div class="proj-top">
+              <span class="proj-name">ERCOT Load Forecasting Model</span>
+              <span class="proj-venue">ERCOT</span>
+            </div>
+            <div class="proj-desc">Gradient Boosting Machine learning model trained to forecast hourly ERCOT Demand. Feature engineering included auto-regressive features, temporal features, and weather features.</div>
+            <div class="proj-tech">Python · Energy · Machine learning</div>
+          </div>
+        </td>
+        <td class="col-value">N/A</td>
+        <td class="col-perf"><span class="perf">N/A</span></td>
+      </tr>
+
+      <tr>
+        <td class="col-status"><span class="badge badge-research">WIP</span></td>
         <td class="col-name">
           <div class="proj">
             <div class="proj-top">
               <span class="proj-name">BTC Cost of Production</span>
-              <span class="proj-venue">Bitcoin</span>
+              <span class="proj-venue">On Chain</span>
             </div>
-            <div class="proj-desc">Blockchain-based analysis of mining costs, energy inputs, and production efficiency. Models sustainable trading signals based on on-chain metrics.</div>
-            <div class="proj-tech">On-chain Data · Models · BTC</div>
+            <div class="proj-desc">Analysis of mining costs, energy inputs, and production efficiency to create a global cost of production index</div>
+            <div class="proj-tech">Python · Crypto · Research</div>
           </div>
         </td>
         <td class="col-value">N/A</td>
         <td class="col-perf"><span class="perf">N/A</span></td>
       </tr>
-    
+
       <tr>
-        <td class="col-status"><span class="badge badge-active">TBD</span></td>
+        <td class="col-status"><span class="badge badge-research">WIP</span></td>
         <td class="col-name">
           <div class="proj">
             <div class="proj-top">
-              <span class="proj-name">NFL Sports Arbitrage</span>
-              <span class="proj-venue">Sportsbooks</span>
+              <span class="proj-name">Pairs Trading EDA</span>
+              <span class="proj-venue">Multi-Asset</span>
             </div>
-            <div class="proj-desc">Sports betting arbitrage using Markov chains for state prediction. Analyzes line movements across 15 sportsbooks with real-time odds aggregation.</div>
-            <div class="proj-tech">Markov Chains · Sports Data · ML</div>
-          </div>
-        </td>
-        <td class="col-value">N/A</td>
-        <td class="col-perf"><span class="perf">N/A</span></td>
-      </tr>
-    
-      <tr>
-        <td class="col-status"><span class="badge badge-growth">TBD</span></td>
-        <td class="col-name">
-          <div class="proj">
-            <div class="proj-top">
-              <span class="proj-name">ERCOT Energy Trading</span>
-              <span class="proj-venue">ERCOT</span>
-            </div>
-            <div class="proj-desc">Locational Marginal Pricing (LMP) analysis and intraday energy market trading. Predicts grid demand patterns for renewable energy arbitrage.</div>
-            <div class="proj-tech">Time Series · Forecasting · Energy</div>
-          </div>
-        </td>
-        <td class="col-value">N/A</td>
-        <td class="col-perf"><span class="perf">N/A</span></td>
-      </tr>
-    
-      <tr>
-        <td class="col-status"><span class="badge badge-active">TBD</span></td>
-        <td class="col-name">
-          <div class="proj">
-            <div class="proj-top">
-              <span class="proj-name">Multi-Asset Pairs Trading</span>
-              <span class="proj-venue">Multi-venue</span>
-            </div>
-            <div class="proj-desc">Statistical arbitrage across crypto, equities, and commodities. Identifies and trades mean reversion opportunities with portfolio-level risk management.</div>
-            <div class="proj-tech">Cointegration · Risk Mgmt · Multi-Asset</div>
+            <div class="proj-desc">Exploring pairs trading across crypto, equities, and commodities. Identifies and validates mean reversion opportunities using quantitative analysis.</div>
+            <div class="proj-tech">Python · Multi-Asset · Research</div>
           </div>
         </td>
         <td class="col-value">N/A</td>
@@ -400,7 +414,7 @@
       </section>
 
       <div class="footer">
-        <div>Tip: link each project row to a repo/readme for details.</div>
+        <div>Note: Each project is linked to a repo/readme for more details.</div>
         <div>© Peter Barengo</div>
       </div>
     </div>
